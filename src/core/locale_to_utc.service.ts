@@ -1,7 +1,7 @@
 import { convertDanishTimeToUtc } from '../timezone_rules/denmark.rule';
-import TimeZone from './timezone.type';
+import FDTTimezone from './fdt_timezone.type';
 
-const ConvertLocaleTimeToUtc = (inputString: string, timeZone: TimeZone): string => {
+const ConvertLocaleTimeToUtc = (inputString: string, timeZone: FDTTimezone): string => {
   switch (timeZone) {
     case 'Europe/Copenhagen': {
       return convertDanishTimeToUtc(inputString);
