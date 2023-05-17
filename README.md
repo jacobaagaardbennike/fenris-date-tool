@@ -1,14 +1,22 @@
 # fenris-date-tool
+
 Date tool to convert to and from Locale times to UTC
 
 # General usage
+
 Currently only works with Danish time.
 
 ```JavaScript
+import { FDTLocaleToUtc } from 'fenris-date-tool';
 
+export const example = (inputDate: string): string => {
+  const utcDateString: string = FDTLocaleToUtc(item.DateTime, 'Europe/Copenhagen');
+  return utcDateString
+};
 ```
 
 # How to publish
+
 ```Console
 npm run clean
 npm run build
@@ -17,12 +25,15 @@ npm publish
 ```
 
 # How it was build
+
 This is created and maintained with with rollup, typedocs (in theory), @microsoft/api-extractor
 
 # How it was build
+
 This is created and maintained with with rollup, typedocs (in theory), @microsoft/api-extractor
 
 start:
+
 ```Console
 npm install --save-dev \
             eslint \
@@ -37,6 +48,7 @@ npm install @microsoft/api-extractor
 ```
 
 The scripts setup should look like:
+
 ```JSON
   "scripts": {
     "dev": "rollup -c -w",
@@ -51,6 +63,7 @@ The scripts setup should look like:
 ```
 
 The rollup config should looklike
+
 ```JavaScript
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import commonjs from "@rollup/plugin-commonjs";
@@ -73,6 +86,7 @@ export default [
 ```
 
 The TSconfig should look like:
+
 ```JSON
 {
   "compilerOptions": {

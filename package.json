@@ -1,6 +1,6 @@
 {
   "name": "fenris-date-tool",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "Date utility to make dates suck less when they aren't saved in UTC",
   "authors": [
     "Jacob Bennike <jab@obton.com>"
