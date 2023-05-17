@@ -1,0 +1,52 @@
+{
+  "name": "fenris-date-tool",
+  "version": "0.0.1",
+  "description": "Date utility to make dates suck less when they aren't saved in UTC",
+  "authors": [
+    "Jacob Bennike <jab@obton.com>"
+  ],
+  "keywords": [
+    "Typescript",
+    "Date"
+  ],
+  "main": "dist/generic-odata-typescript-client.cjs.js",
+  "module": "dist/generic-odata-typescript-client.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobaagaardbennike/locale_date_to_utc.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobaagaardbennike/locale_date_to_utc/issues"
+  },
+  "homepage": "https://github.com/jacobaagaardbennike/locale_date_to_utc#readme",
+  "scripts": {
+    "dev": "rollup -c -w",
+    "build": "rollup -c --bundleConfigAsCjs",
+    "prebuild:types": "rimraf ./build",
+    "build:types": "tsc -p ./tsconfig.json --outDir build --declaration true && api-extractor run",
+    "predocs": "rimraf ./docs",
+    "docs": "typedoc src --out docs",
+    "clean": "rimraf ./build ./dist ./docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@microsoft/api-extractor": "^7.34.9",
+    "@rollup/plugin-commonjs": "^25.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.2",
+    "@rollup/plugin-typescript": "^11.1.1",
+    "@types/node": "^20.1.7",
+    "prettier": "2.8.8",
+    "eslint": "^8.40.0",
+    "rimraf": "^5.0.0",
+    "rollup": "^3.22.0",
+    "ts-node": "^10.9.1",
+    "tslib": "^2.5.0",
+    "typedoc": "^0.24.7",
+    "typescript": "^5.0.4"
+  }
+}
